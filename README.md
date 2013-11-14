@@ -35,13 +35,22 @@ Experimental microarray data is available at http://www.ncbi.nlm.nih.gov/geo/. W
 Queries:
 --------
 
-We focus on 5 queries that have a mix of DB ops, statistics and linear algebra.
+Based on the operations commonly performed by genomics researchers, we selected five representative queries that have a mix of DB ops, statistics and linear algebra. The general workflow looks as follows:
+(a) select a subset of the input datasets using traditional DB ops (selects, joins)
+(b) perform linear algebra or statistics operations (see below)
+(c) combine results of step (b) with initial dataset
 
-- Linear Regression
-- Covariance
-- SVD
-- Biclustering
-- Statistics
+We focus on the linear algebra and stats operations below: 
+
+- Linear Regression: build regression model to predict drug response from expression data
+
+- Covariance: determine which pairs of genes have expression values that are correlated
+
+- SVD: reduce the dimensionality of the problem to the top 50 components
+
+- Biclustering: simultaneously cluster rows and columns in the expression matrix to find related genes
+
+- Statistics: determine if certain sets of genes are highly expressed compared to the entire set of genes
 
 Systems:
 --------
@@ -57,21 +66,17 @@ As part of this work, we have tested the benchmark queries on a variety of syste
 Code:
 -----
 
-The code for all the above systems is available in this repository. Note that the code is not guaranteed to be optimized. Please feel free to optimize the code further and submit your results.
-
-The data generator is also available in the data/generator folder. 
+We implemented the benchmark queries in all the systems above and is freely available in this repository. We've made efforts to optimize the code but there are certainly ways to do this better, so please feel free to optimize the code further and submit your results.
 
 Experimental Setup:
 -------------------
 
-All the code was run on a 4-node cluster with each machine having the following configuration.
-
-Our setup was: all data sizes X 1, 2, 4-node clusters.
+We ran out benchmark code for all combinations of data sizes and # of nodes (in our case, 1, 2 or 4 nodes). Each machine has the following configuration: Intel Xeon E5-2620 processors with 2-sockets of 6 cores each and 48 GB RAM, 6 2-TB disks configured as 3 virtual 4-TB disks (RAID 0).
 
 Paper:
 ------
 
-Please read more about this work in our paper. The work is currently in submission.
+The work is currently in submission, so a tech report will be made available ASAP.
 
 Contact:
 --------
