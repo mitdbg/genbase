@@ -30,6 +30,8 @@ This benchmark focuses on microarray (i.e. gene expression) data augmented by ge
 - Large: 30K X 40K
 - Extra Large: 60K X 70K (* none of the systems we tested on our experimental set up were able to run on the extra large dataset. Read more in experimental setup)
 
+Experimental microarray data is available at http://www.ncbi.nlm.nih.gov/geo/. We chose to write our own data generator based on experimental data so that we could generate variable size data and generate the associated metadata.
+
 Queries:
 --------
 
