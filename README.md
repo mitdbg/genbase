@@ -76,7 +76,7 @@ We ran out benchmark code for all combinations of data sizes and # of nodes (in 
 Paper:
 ------
 
-The work is currently in submission, so a tech report will be made available ASAP.
+he work is currently in submission. A tech report of the work can be found at http://dspace.mit.edu/handle/1721.1/82517.
 
 Contact:
 --------
