@@ -59,9 +59,10 @@ As part of this work, we have tested the benchmark queries on a variety of syste
 - R
 - pbdR
 - Postgres+R
+- Postgres+MADlib
 - Column DBMS+R
-- Column DBMS+MADlib
 - SciDB
+- Hadoop+Mahout
 
 Code:
 -----
