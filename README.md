@@ -77,7 +77,7 @@ We ran out benchmark code for all combinations of data sizes and # of nodes (in 
 Paper:
 ------
 
-The paper, presented at SIGMOD 2014, can be found <a http://dl.acm.org/citation.cfm?id=2595633&CFID=593829267&CFTOKEN=38043504>here<\a>.
+The paper, presented at SIGMOD 2014, can be found <a href= "http://dl.acm.org/citation.cfm?id=2595633&CFID=593829267&CFTOKEN=38043504">here<\a>.
 
 Contact:
 --------
