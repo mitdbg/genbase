@@ -67,7 +67,7 @@ As part of this work, we have tested the benchmark queries on a variety of syste
 Code:
 -----
 
-We implemented the benchmark queries in all the systems above and is freely available in this repository. We've made efforts to optimize the code but there are certainly ways to do this better, so please feel free to optimize the code further and submit your results.
+We implemented the benchmark queries in all the systems above and code for all systems except SciDB is freely available in this repository. We've made efforts to optimize the code but there are certainly ways to do this better, so please feel free to optimize the code further and submit your results.
 
 Experimental Setup:
 -------------------
