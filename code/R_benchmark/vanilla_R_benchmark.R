@@ -80,7 +80,7 @@ covariance <- function()
   cat(sprintf('Covariance analytics: %f\n', (proc.time() - ptm)['elapsed']))
   ptm = proc.time()
 
-  covar <- which(covar>0.01*(max(covar)), arr.ind=T)
+  covar <- which(covar>0.01*(max(covar))return, arr.ind=T)
   res = merge(covar, gmd_dt, by.x='row', by.y='id')
   res = merge(res, gmd_dt, by.x='col', by.y='id')  
  
@@ -116,7 +116,6 @@ biclustering<-function()
 
   ### Data management ops end ###
   cat(sprintf('Regression data management: %f\n', (proc.time() - ptm)['elapsed']))
-  return()
   ptm = proc.time()
   
   # run biclustering
@@ -191,7 +190,6 @@ stats <- function()
   
   ### Data management ops end ###
   cat(sprintf('Stats data management: %f\n', (proc.time() - ptm)['elapsed']))
-  return()
   ptm = proc.time()
 
   # run wilcox rank sum test
