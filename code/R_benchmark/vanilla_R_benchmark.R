@@ -80,7 +80,7 @@ covariance <- function()
   cat(sprintf('Covariance analytics: %f\n', (proc.time() - ptm)['elapsed']))
   ptm = proc.time()
 
-  covar <- which(covar>0.01*(max(covar))return, arr.ind=T)
+  covar <- which(covar>0.01*(max(covar)), arr.ind=T)
   res = merge(covar, gmd_dt, by.x='row', by.y='id')
   res = merge(res, gmd_dt, by.x='col', by.y='id')  
  
