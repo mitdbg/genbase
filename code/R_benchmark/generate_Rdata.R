@@ -1,3 +1,6 @@
+library(data.table)
+suppressPackageStartupMessages(library(bit64))
+
 args <- commandArgs(trailingOnly = TRUE)
 PATH <- args[1]
 NGENES <- args[2]
@@ -9,14 +12,18 @@ PATIENTS <- paste(PATH, '/PatientMetaData-', NGENES, '-', NPATIENTS, sep="")
 TXT <- '.txt'
 RDATA <- '.Rdata'
 
-geo <- read.csv(paste(GEO, TXT, sep=""))
+geo <- fread(paste(GEO, TXT, sep=""))
 save(geo, file=paste(GEO, RDATA, sep=""))
+geo <- NULL
 
-go <- read.csv(paste(GO, TXT, sep=""))
+go <- fread(paste(GO, TXT, sep=""))
 save(go, file=paste(GO, RDATA, sep=""))
+go <- NULL
 
-genes <- read.csv(paste(GENES, TXT, sep=""))
+genes <- fread(paste(GENES, TXT, sep=""))
 save(genes, file=paste(GENES, RDATA, sep=""))
+genes <- NULL
 
-patients <- read.csv(paste(PATIENTS, TXT, sep=""))
+patients <- fread(paste(PATIENTS, TXT, sep=""))
 save(patients, file=paste(PATIENTS, RDATA, sep=""))
+patients <- NULL
